@@ -1,5 +1,5 @@
 const isPlainObject = require('lodash.isplainobject');
-const Canvas = require('canvas-prebuilt');
+const Canvas = require('canvas');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 /**

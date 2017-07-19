@@ -1,35 +1,35 @@
 {
-  "name": "node-googlecharts",
-  "version": "1.0.0",
-  "description": "API to server-side Google Charts generation processing",
-  "author": "Renato Pestana <renatompestana@gmail.com>",
-  "license": "MIT",
-  "engines": {
-    "node": ">=4.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/3nvy/node-googlecharts-1"
-  },
-  "bugs": {
-    "url": "https://github.com/3nvy/node-googlecharts-1/issues"
-  },
-  "homepage": "https://github.com/3nvy/node-googlecharts-1#readme",
-  "main": "src/index.js",
-  "scripts": {
-    "bin": "NODE_ICU_DATA=node_modules/full-icu node bin/node-googlecharts",
-    "example": "NODE_ICU_DATA=node_modules/full-icu node examples/ColumnChart",
-    "test": "NODE_ICU_DATA=node_modules/full-icu mocha"
-  },
-  "dependencies": {
-    "canvas-prebuilt": "^1.6.5-prerelease.1",
-    "jsdom": "^11.1.0",
-    "lodash.isplainobject": "^4.0.4"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^5.3.0",
-    "full-icu": "^1.1.3",
-    "mocha": "^2.5.3"
-  }
+    "name": "node-googlecharts",
+    "version": "1.0.0",
+    "description": "API to server-side Google Charts generation processing",
+    "author": "Renato Pestana <renatompestana@gmail.com>",
+    "license": "MIT",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/3nvy/node-googlecharts"
+    },
+    "bugs": {
+        "url": "https://github.com/3nvy/node-googlecharts/issues"
+    },
+    "homepage": "https://github.com/3nvy/node-googlecharts#readme",
+    "main": "src/index.js",
+    "scripts": {
+        "bin": "NODE_ICU_DATA=node_modules/full-icu node bin/node-googlecharts",
+        "example": "NODE_ICU_DATA=node_modules/full-icu node examples/ColumnChart",
+        "test": "NODE_ICU_DATA=node_modules/full-icu mocha"
+    },
+    "dependencies": {
+        "canvas": "^1.6.5",
+        "jsdom": "^11.1.0",
+        "lodash.isplainobject": "^4.0.4"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "chai-as-promised": "^5.3.0",
+        "full-icu": "^1.1.3",
+        "mocha": "^2.5.3"
+    }
 }
