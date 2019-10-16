@@ -1,17 +1,17 @@
 const isPlainObject = require('lodash.isplainobject');
-const Canvas = require('canvas-prebuilt');
+const Canvas = require('canvas');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 /**
  * Hotfix to calculate text width/height so Google Charts
  * can separate labels into different lines
- * 
- * @param {window} window 
- * @param {element} element 
+ *
+ * @param {window} window
+ * @param {element} element
  * @returns {JSON}
  */
 function measureTextSize(window, element) {
-    const canvas = new Canvas(0, 0);
+    const canvas = Canvas.createCanvas(0, 0);
     const ctx = canvas.getContext("2d");
     const fontSize = window.getComputedStyle(element).fontSize || 13;
     const fontFamily = window.getComputedStyle(element).fontFamily || 'arial';
@@ -55,9 +55,9 @@ function applyJsdomWorkaround(window, forceUncutLine) {
 }
 
 /**
- * Pre-Generates GoogleChart with given options 
- * 
- * @param {args} Object {chartOptions, format} 
+ * Pre-Generates GoogleChart with given options
+ *
+ * @param {args} Object {chartOptions, format}
  * @returns {Promise}
  */
 function generateChart(args) {
@@ -92,7 +92,7 @@ function generateChart(args) {
 
 /**
  * Render GoogleChart at JSDOM
- * 
+ *
  * @param {args} Object {window, chartOptions, format}
  * @returns {Promise}
  */
@@ -130,7 +130,7 @@ function renderChart(args) {
 
 /**
  * Extract either svg or png base64 from JSDOM
- * 
+ *
  * @param {args} Object {window, chartOptions, format}
  * @returns {Promise}
  */
@@ -145,9 +145,9 @@ function extractImage(args) {
 
 /**
  * Render a Google Chart to a svg/png image
- * 
+ *
  * @param {chartOptions} Object Google ChartWrapper options
- * @param {format} String 'svg' || 'png(b64)' 
+ * @param {format} String 'svg' || 'png(b64)'
  * @returns {Promise}
  */
 function render(chartOptions, format, forceUncutLine) {
